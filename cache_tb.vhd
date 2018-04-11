@@ -1,0 +1,68 @@
+library IEEE;
+use IEEE.Std_logic_1164.all;
+use IEEE.Numeric_Std.all;
+
+entity cache_datapath_tb is
+end;
+
+architecture bench of cache_datapath_tb is
+
+  component cache_datapath port(
+      clk: in std_logic;
+      read,write: in std_logic;
+      writeData: in std_logic_vector(31 downto 0);
+      fullAddress: in std_logic_vector(9 downto 0);
+      outData:out std_logic_vector(31 downto 0)
+  );
+  end component;
+
+  signal clk: std_logic;
+  signal read,write: std_logic;
+  signal writeData: std_logic_vector(31 downto 0) ;
+  signal fullAddress: std_logic_vector(9 downto 0);
+  signal outData: std_logic_vector(31 downto 0) ;
+
+begin
+
+  uut: cache_datapath port map ( clk       => clk,
+                                 read      => read,
+                                 write     => write,
+                                 writeData => writeData,
+                                 fullAddress => fullAddress,
+                                 outData => outData );
+
+  stimulus: process
+  begin
+      wait for 10 ns;
+      writeData <= "00000000000000001111111111111111";
+      fullAddress <= "0000000001";
+      write <= '1';
+      read <= '0';
+      wait for 20 ns;
+      writeData <= "10101010101010101010101011010101";
+      fullAddress <= "0000000001";
+      write <= '1';
+      read <= '0';
+      wait for 20 ns;
+      writeData <= "11111111111111110000000000000000";
+      read <= '1';
+      write <= '0';
+      wait for 20 ns;
+      fullAddress <= "0101000001";
+
+    wait;
+  end process;
+
+
+    clk_process :process
+     begin
+  	while (true) loop
+          clk <= '0';
+          wait for 5 ns;
+          clk <= '1';
+          wait for 5 ns;
+  	end loop;
+     end process;
+
+
+end;

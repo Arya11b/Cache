@@ -1,0 +1,120 @@
+F:/Programming/vhdl/SAYEH_Extension/cache_tb.vhd {1 {vcom -work work -2002 -explicit -vopt {F:\Programming\vhdl\SAYEH_Extension\cache_tb.vhd}
+Model Technology ModelSim SE-64 vcom 10.1c Compiler 2012.07 Jul 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity cache_datapath_tb
+-- Compiling architecture bench of cache_datapath_tb
+
+} {} {}} F:/Programming/vhdl/SAYEH_Extension/DataArray.vhd {2 {vcom -work work -2002 -explicit -vopt F:/Programming/vhdl/SAYEH_Extension/DataArray.vhd
+Model Technology ModelSim SE-64 vcom 10.1c Compiler 2012.07 Jul 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity DataArray
+-- Compiling architecture behavioral of DataArray
+** Warning: [9] F:/Programming/vhdl/SAYEH_Extension/DataArray.vhd(19): (vcom-1013) Initial value of "index" depends on value of signal "address".
+
+
+} {} {}} F:/Programming/vhdl/SAYEH_Extension/memory.vhd {2 {vcom -work work -2002 -explicit -vopt F:/Programming/vhdl/SAYEH_Extension/memory.vhd
+Model Technology ModelSim SE-64 vcom 10.1c Compiler 2012.07 Jul 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity memory
+-- Compiling architecture behavioral of memory
+** Warning: [9] F:/Programming/vhdl/SAYEH_Extension/memory.vhd(18): (vcom-1013) Initial value of "index" depends on value of signal "address".
+
+
+} {} {}} F:/Programming/vhdl/SAYEH_Extension/cache_datapath.vhd {1 {vcom -work work -2002 -explicit -vopt F:/Programming/vhdl/SAYEH_Extension/cache_datapath.vhd
+Model Technology ModelSim SE-64 vcom 10.1c Compiler 2012.07 Jul 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity cache_datapath
+-- Compiling architecture rtl of cache_datapath
+
+} {} {}} F:/Programming/vhdl/SAYEH_Extension/cacheDataInSelector.vhd {1 {vcom -work work -2002 -explicit -vopt F:/Programming/vhdl/SAYEH_Extension/cacheDataInSelector.vhd
+Model Technology ModelSim SE-64 vcom 10.1c Compiler 2012.07 Jul 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity cacheDataInSelector
+-- Compiling architecture arch1 of cacheDataInSelector
+
+} {} {}} F:/Programming/vhdl/SAYEH_Extension/mux.vhd {1 {vcom -work work -2002 -explicit -vopt F:/Programming/vhdl/SAYEH_Extension/mux.vhd
+Model Technology ModelSim SE-64 vcom 10.1c Compiler 2012.07 Jul 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux
+-- Compiling architecture rtl of mux
+
+} {} {}} F:/Programming/vhdl/SAYEH_Extension/decoder.vhd {1 {vcom -work work -2002 -explicit -vopt F:/Programming/vhdl/SAYEH_Extension/decoder.vhd
+Model Technology ModelSim SE-64 vcom 10.1c Compiler 2012.07 Jul 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity decoder
+-- Compiling architecture rtl of decoder
+
+} {} {}} F:/Programming/vhdl/SAYEH_Extension/MissHitLogic.vhd {1 {vcom -work work -2002 -explicit -vopt F:/Programming/vhdl/SAYEH_Extension/MissHitLogic.vhd
+Model Technology ModelSim SE-64 vcom 10.1c Compiler 2012.07 Jul 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity MissHitLogic
+-- Compiling architecture rtl of MissHitLogic
+
+} {} {}} F:/Programming/vhdl/SAYEH_Extension/TagValidArray.vhd {2 {vcom -work work -2002 -explicit -vopt F:/Programming/vhdl/SAYEH_Extension/TagValidArray.vhd
+Model Technology ModelSim SE-64 vcom 10.1c Compiler 2012.07 Jul 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity TagValidArray
+-- Compiling architecture behavioral of TagValidArray
+** Warning: [9] F:/Programming/vhdl/SAYEH_Extension/TagValidArray.vhd(21): (vcom-1013) Initial value of "index" depends on value of signal "address".
+
+
+} {} {}} F:/Programming/vhdl/SAYEH_Extension/DataSelectionCircuit.vhd {2 {vcom -work work -2002 -explicit -vopt F:/Programming/vhdl/SAYEH_Extension/DataSelectionCircuit.vhd
+Model Technology ModelSim SE-64 vcom 10.1c Compiler 2012.07 Jul 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity DataSelectionCircuit
+-- Compiling architecture behavioral of DataSelectionCircuit
+** Warning: [9] F:/Programming/vhdl/SAYEH_Extension/DataSelectionCircuit.vhd(21): (vcom-1013) Initial value of "index" depends on value of signal "address".
+
+
+} {} {}} F:/Programming/vhdl/SAYEH_Extension/controller.vhd {1 {vcom -work work -2002 -explicit -vopt {F:\Programming\vhdl\SAYEH_Extension\controller.vhd}
+Model Technology ModelSim SE-64 vcom 10.1c Compiler 2012.07 Jul 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity controller
+-- Compiling architecture behavioral of controller
+
+} {} {}}

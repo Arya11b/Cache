@@ -1,0 +1,30 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.std_logic_unsigned.all;
+use IEEE.NUMERIC_STD.ALL;
+
+
+entity MissHitLogic is port(
+    tag: in std_logic_vector (3 downto 0);
+    w0: in std_logic_vector (4 downto 0);
+    w1: in std_logic_vector (4 downto 0);
+    hit:out std_logic;
+    w0_valid: out std_logic;
+    w1_valid: out std_logic
+);
+end entity;
+
+architecture rtl of MissHitLogic is
+signal xnorW0:std_logic_vector(3 downto 0);
+signal xnorW1:std_logic_vector(3 downto 0);
+signal equalToW0:std_logic;
+signal equalToW1:std_logic;
+begin
+    xnorW0 <= tag xnor w0(4 downto 1);
+    xnorW1 <= tag xnor w1(4 downto 1);
+    equalToW0 <= (xnorW0(3) and xnorW0(2)) and (xnorW0(1) and xnorW0(0));
+    equalToW1 <= (xnorW1(3) and xnorW1(2)) and (xnorW1(1) and xnorW1(0));
+    hit <= (w0(0) and equalToW0) or (w1(0) and equalToW1);
+    w0_valid <= w0(0) and equalToW0;
+    w1_valid <= w1(0) and equalToW1;
+end rtl;

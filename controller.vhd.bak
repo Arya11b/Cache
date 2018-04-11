@@ -1,0 +1,68 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.std_logic_unsigned.all;
+use IEEE.NUMERIC_STD.ALL;
+
+entity controller is port(
+    clk: in std_logic;
+    hit: in std_logic;
+    read: in std_logic;
+    write: in std_logic;
+    w0_valid,w1_valid: in std_logic;
+    cache_dataReady: in std_logic;
+    reset_n: out std_logic;
+    cache_wren: out std_logic;
+    ram_wren: out std_logic;
+    invalidate: out std_logic
+);
+end entity;
+
+architecture behavioral of controller is
+
+    type state_type is (init,writeS,readS,waitS);
+    signal state, nextState : state_type;
+
+begin
+    process( clk )
+	begin
+		if rising_edge(clk) then
+			state <= nextState;
+		end if ;
+	end process ;
+    process(state)
+    begin
+        cache_wren <= '0';
+        invalidate <= '0';
+        ram_wren <= '0';
+        reset_n <= '0';
+        case state is
+            when init =>
+                if read = '1' then
+                    if cache_dataReady = '1' then
+                        if hit = '0' then
+                            cache_wren <= '1';
+                        end if;
+                        nextState<=readS;
+                    end if;
+                elsif write = '1' then
+                    ram_wren<='1';
+                    if hit = '1' then
+                        invalidate <= '1';
+                    end if;
+                    nextState<=writeS;
+                end if;
+
+            when readS =>
+                cache_wren <= '1';
+                nextState <= init;
+            when writeS =>
+                ram_wren <= '1';
+                if hit = '1' then
+                    invalidate <= '1';
+                end if;
+                nextState <= init;
+
+
+        end case;
+    end process;
+end architecture;
